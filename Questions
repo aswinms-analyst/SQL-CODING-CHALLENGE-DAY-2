@@ -1,0 +1,47 @@
+Day 2: SQL Coding Challenge – Online Bookstore 📚
+
+Question 1: CREATE TABLE with PRIMARY & FOREIGN KEY
+Scenario:
+You are creating a database for an online bookstore.
+Task:
+•    Create a table Books with columns:
+o    BookID → INTEGER, PRIMARY KEY
+o    Title → VARCHAR(100), NOT NULL
+o    Author → VARCHAR(50), NOT NULL
+o    ISBN → VARCHAR(20), UNIQUE
+o    Price → DECIMAL(8,2), CHECK(Price > 0)
+•    Create a table Orders with columns:
+o    OrderID → INTEGER, PRIMARY KEY
+o    BookID → INTEGER, FOREIGN KEY REFERENCES Books(BookID)
+o    OrderDate → DATE, NOT NULL
+o    Quantity → INTEGER, CHECK(Quantity > 0)
+Expected Output:
+Tables are created successfully with all constraints applied.
+__
+Question 2: ALTER TABLE – Add Default Constraint
+Scenario:
+The bookstore wants to make sure ISBN is Default for every book.
+Task:
+•    Alter the Books table to add a Default constraint to the ISBN column.
+Expected Output:
+The ISBN column enforces uniqueness.
+__
+Question 3: INSERT, RETRIEVE & UPDATE with Constraints
+Scenario:
+You want to add sample book data and update certain records.
+Task:
+•    Insert at least 5 records into the Books table, respecting all constraints.
+•    Retrieve all records to verify entries.
+•    Update the Price or Quantity for a specific record while maintaining the CHECK constraints.
+Expected Output:
+All entries and updates comply with constraints and are displayed correctly.
+__
+Question 4: DELETE vs TRUNCATE
+Scenario:
+The bookstore wants to manage orders by removing some rows or clearing all data.
+Task:
+•    Use DELETE with a WHERE clause to remove specific rows from Orders table.
+•    Use TRUNCATE to remove all rows while keeping table structure intact.
+Expected Output:
+•    DELETE removes selected rows.
+•    TRUNCATE clears all rows quickly but keeps the table structure. 
